@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">Click</button>
+    <button id="btn2">Click</button>
+    <script>
+        // TASK: change the code, so that when a user clicks on a button, its background will be changed in red after 2 seconds.
+        function changeToRed() {
+            this.style.background = "red";
+        }
+        let btn1 = document.querySelector("#btn1");
+        let btn2 = document.querySelector("#btn2");
+        
+        btn1.addEventListener("click", function() {
+            setTimeout(changeToRed.apply(this), 2000);
+        });
+        btn2.addEventListener("click", function() {
+            let that = this;
+            setTimeout( function() {
+                changeToRed.apply(that);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .player {
+            background-color: antiquewhite;
+        }
+        .player li {
+            list-style-type: none;
+            padding: 0.3em 0;
+            /*  background-color: aqua; */
+            cursor: pointer;
+        }
+        .player li:hover {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <ul class="player">
+        <li>Song 1</li>
+        <li>Song 2</li>
+        <li>Song 3</li>
+    </ul>
+    <div class="output"></div>
+    <script>
+        // Can you fix the error, so that when the user clicks on 'player li' element respective song title will be displayd in 'output'.
+        let player = {
+            trackName: "",
+            node: document.querySelector(".player"),
+            output: document.querySelector(".output"),
+            
+            setTrack(trackName) {
+                // console.log(this);
+                this.trackName = trackName;
+            },
+            showTrack() {
+                // console.log(this);
+                this.output.innerHTML = `Playing track: ${this.trackName}`;
+                
+            },
+            init() {
+                let that = this;
+                this.node.addEventListener("click", function (e) {
+                    if (e.target.tagName === "LI") {
+                        that.setTrack(e.target.innerText);
+                        that.showTrack();
+                    }
+                });
+            }
+        };
+        player.init();
+    </script>
+</body>
+</html>
