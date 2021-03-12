@@ -18,7 +18,7 @@ let Cat = function(name, food, sound) {
 
 Cat.prototype = Object.create(Animal.prototype);
 
-// Тук явно съм замзал нещо, защото не работи
+// Вече работи 
 Cat.prototype.myao = function() { 
     console.log(`${this.name} ${this.sound}`);
 }
