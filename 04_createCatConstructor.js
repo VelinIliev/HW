@@ -12,7 +12,7 @@ Animal.prototype.eat = function(){
 
 
 let Cat = function(name, food, sound) {
-    this.__proto__ = new Animal(name, food);
+    Animal.call(this, name, food);
     this.sound = sound;
 };
 

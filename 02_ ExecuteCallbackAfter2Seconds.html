@@ -18,7 +18,7 @@
         let btn2 = document.querySelector("#btn2");
         
         btn1.addEventListener("click", function() {
-            setTimeout(changeToRed.apply(this), 2000);
+            setTimeout(changeToRed.bind(this), 2000);
         });
         btn2.addEventListener("click", function() {
             let that = this;
