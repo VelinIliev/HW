@@ -1,0 +1,72 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+html, body, h1, h2, ol {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    padding: .2em;
+    background-color: aquamarine;
+    text-align: center;
+}
+h2 {
+    margin-top: 1.5em;
+    margin-bottom: .2em;
+    background-color: antiquewhite;
+    text-align: center;
+}
+ol {
+    list-style: none;
+    text-align: center;
+}
+li {
+    margin: .8em;
+}
+.container {
+    width: 25em;
+    margin: auto;
+}
+.checked {
+    font-weight: bold;
+}
+.checked::before {
+    font-size: .7em;
+    content: "\2705"; 
+}
+.buttons {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+}
+.btnTotal {
+    display: inline-block;
+    margin-right: 1em;
+}
+.dishes li:hover{
+    font-weight: bold;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+.displayResult {
+    text-align: center;
+    font-size: 1.5em;
+    background-color: aqua;
+    padding: .2em;
+}
+.displayDishes {
+    background-color: #ddd;
+    padding: .5em;
+}
+h3 {
+    margin-top: -.0001em;
+    background-color: antiquewhite;
+    text-align: center;
+}
+.dishListOl li {
+    line-height: .5em;
+}
