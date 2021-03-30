@@ -36,6 +36,9 @@ li {
     font-size: .7em;
     content: "\2705"; 
 }
+span::after {
+    content: " лв."; 
+}
 .buttons {
     margin-top: 2em;
     display: flex;
