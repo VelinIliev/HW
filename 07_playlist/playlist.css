@@ -1,0 +1,46 @@
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    color: white;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 1em;
+}
+.classical, [data-track-genre="Classical"]::before {
+    color:  aqua;
+}
+.rock, [data-track-genre="Rock"]::before {
+    color: magenta;
+}
+.newWave, [data-track-genre="New Wave"]::before {
+    color: lightcoral;
+}
+/* span::before {
+    font-size: 1.2em;
+    color: white;
+    content: "\2022"; 
+} */
+.genres {
+    font-size: 1.2em;
+}
+li {
+    margin: .5em;
+    list-style-type: none;
+}
+li::before {
+    content: "►";
+}
+
+[data-track-genre="Classical"]:hover {
+    background-color: aqua;
+    /* color: white; */
+}
+[data-track-genre="Rock"]:hover {
+    background-color: magenta;
+}
+[data-track-genre="New Wave"]:hover {
+    background-color: lightcoral;
+}
